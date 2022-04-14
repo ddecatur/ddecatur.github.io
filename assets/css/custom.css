@@ -49,16 +49,6 @@ li.highlighted {
 	margin-bottom: 20px;
 }
 
-/* Note: total section width is 500px */
-
-/* Without border */
-/* .highlight-img {
-	width: 450px;
-	padding: 0px;
-	margin-left: 25px;
-	margin-bottom: 15px;
-} */
-
 /* With border */
 .highlight-img {
 	width: 90%;
