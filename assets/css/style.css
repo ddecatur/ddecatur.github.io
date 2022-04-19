@@ -15,18 +15,19 @@ body {
 
 .name_and_pic {
     background-color: var(--box);
-    /* padding: 10px; */
     color:  var(--main);
     text-align: center;
 }
 
 .bio {
-    background-color: var(--box);
-    /* padding: 10px; */
-    color:  var(--main);
     margin: auto;
     text-align: left;
     width: 400px;
+}
+
+.socials {
+    margin: auto;
+    width: 400px; 
 }
 
 .box-1 {
@@ -52,12 +53,13 @@ body {
 .research_img {
     float: left;
     width: 200px;
+    padding: 0px, 10px, 10px, 10px;
     vertical-align: middle;
 }
 
 .research_text {
     float: right;
     width: 560px;
-    padding: 20px, 0px, 0px, 0px;
+    padding: 10px, 0px, 10px, 10px;
     vertical-align: middle;
 }
