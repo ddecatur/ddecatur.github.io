@@ -12,11 +12,30 @@ body {
     background-color: var(--body);
 }
 
+.name_and_pic {
+    background-color: var(--box);
+    padding: 10px;
+    color:  var(--main);
+    text-align: center;
+    /* width: 410px; */
+}
+
+.bio {
+    background-color: var(--box);
+    padding: 10px;
+    color:  var(--main);
+    margin: auto;
+    text-align: left;
+    width: 410px;
+    /* float: left; */
+}
+
 .box-1 {
     background-color: var(--box);
     padding: 10px;
     color:  var(--main);
-    width: 720px;
+    /* width: 720px; */
+    width: 820px;
     margin: auto;
-    text-align: center;
+    text-align: left;
 }
