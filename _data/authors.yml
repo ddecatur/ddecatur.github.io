@@ -1,0 +1,17 @@
+dale:
+  first_name: Dale
+  last_name: Decatur
+  website: https://ddecatur.github.io/
+  is_me: true
+rana:
+  first_name: Rana
+  last_name: Hanocka
+  website: https://people.cs.uchicago.edu/~ranahanocka/
+itai:
+  first_name: Itai 
+  last_name: Lang
+  website: https://scholar.google.com/citations?user=q0bBhtsAAAAJ&hl=en
+skr:
+  first_name: Sanjay
+  last_name: Krishnan
+  website: https://people.cs.uchicago.edu/~skr

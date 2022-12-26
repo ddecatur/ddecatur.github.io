@@ -1,0 +1,4 @@
+- date: Dec 2022
+  description: >-
+    We present [_3D Highlighter_](https://threedle.github.io/3DHighlighter/),
+    which localizes regions on 3D shapes via text descriptions.
