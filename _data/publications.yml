@@ -3,7 +3,7 @@
   venue: ArXiv, 2022
   description: "Given a mesh and text specifying a target localization region, we learn a neural field which maps 3D coordinates to the probability being in the target localization region."
   project_page: "https://threedle.github.io/3DHighlighter/"
-  github: https://github.com/threedle/3DHighlighter
+  github: threedle/3DHighlighter
   arxiv: 2212.11263
   image: highlighter_before.png
   image_mouseover: highlighter_after.mp4
