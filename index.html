@@ -23,7 +23,6 @@ layout: null
 </head>
 
 <body>
-
   <section class="hero">
     <div class="hero-body container is-max-desktop">
       <div class="columns is-vcentered">
@@ -44,28 +43,29 @@ layout: null
               <!-- <a class="external-link button is-light is-link" href="cv.html">
                 <span class="icon"><i class="fas fa-file"></i></span>
                 <span>CV</span>
-              </a>
-
+              </a> -->
               <a class="external-link button is-light is-link"
                 href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
                 <span class="icon"><i class="ai ai-google-scholar"></i></span>
                 <span>Scholar</span>
-              </a> -->
-
+              </a>
               <a class="external-link button is-light is-link" href="https://github.com/{{ site.github_username }}">
                 <span class="icon"><i class="fab fa-github"></i></span>
                 <span>Github</span>
               </a>
-
-              <a class="external-link button is-light is-link" href="https://twitter.com/{{ site.twitter_username }}">
+              <a class="external-link button is-light is-link" href="mailto:{{ site.email }}">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+                <span>Email</span>
+              </a>
+              <!-- <a class="external-link button is-light is-link" href="https://twitter.com/{{ site.twitter_username }}">
                 <span class="icon"><i class="fab fa-twitter"></i></span>
                 <span>Twitter</span>
-              </a>
-
-              <a class="external-link button is-light is-link" href="https://linkedin.com/in/{{ site.linkedin_username }}">
+              </a> -->
+              <!-- <a class="external-link button is-light is-link"
+                href="https://linkedin.com/in/{{ site.linkedin_username }}">
                 <span class="icon"><i class="fab fa-linkedin"></i></span>
                 <span>LinkedIn</span>
-              </a>
+              </a> -->
             </div>
 
           </div>
@@ -75,16 +75,10 @@ layout: null
   </section>
 
   <!-- News. -->
-  <div class="hr">
-    <div class="container">
-      <hr>
-    </div>
-  </div>
-
   <section class="section">
     <div class="container is-max-desktop">
-
       <h2 class="title is-3">News</h2>
+      <hr style="border: 1px solid #000">
       <div class="content">
         <ul>
           {% for news in site.data.news %}
@@ -96,7 +90,7 @@ layout: null
       </div>
 
       <h2 class="title is-3">Research</h2>
-
+      <hr style="border: 1px solid #000">
       {% for publication in site.data.publications %}
       <div class="publication-block columns">
 
@@ -138,20 +132,24 @@ layout: null
             <p class="publication-description">{{ publication.description }}</p>
             <!-- Publication Links. -->
             <div class="publication-links buttons field">
-              <a class="external-link button is-small is-light is-link is-rounded" href="{{ publication.project_page }}">
-                <span class="icon"><i class="fas fa-globe-asia"></i></span>
+              <a class="external-link button is-small is-light is-link is-rounded"
+                href="{{ publication.project_page }}">
+                <span class="icon"><i class="fas fa-globe-americas"></i></span>
                 <span>Project Page</span>
               </a>
-              <a class="external-link button is-small is-light is-link is-rounded" href="https://arxiv.org/pdf/{{ publication.arxiv }}.pdf">
+              <a class="external-link button is-small is-light is-link is-rounded"
+                href="https://arxiv.org/pdf/{{ publication.arxiv }}.pdf">
                 <span class="icon"><i class="fas fa-file-pdf"></i></span>
                 <span>PDF</span>
               </a>
-              <a class="external-link button is-small is-light is-link is-rounded" href="https://arxiv.org/abs/{{ publication.arxiv }}">
+              <a class="external-link button is-small is-light is-link is-rounded"
+                href="https://arxiv.org/abs/{{ publication.arxiv }}">
                 <span class="icon"><i class="ai ai-arxiv"></i></span>
                 <span>arXiv</span>
               </a>
               {% if publication.github %}
-              <a class="external-link button is-small is-light is-link is-rounded" href="https://github.com/{{ publication.github }}">
+              <a class="external-link button is-small is-light is-link is-rounded"
+                href="https://github.com/{{ publication.github }}">
                 <span class="icon"><i class="fa fab fa-github"></i></span>
                 <span>Code</span>
               </a>
@@ -175,15 +173,17 @@ layout: null
         <a class="external-link" href="https://github.com/{{ site.github_username }}">
           <i class="fab fa-github"></i>
         </a>
-        <!-- <a class="external-link" href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
+        <a class="external-link" href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
           <i class="ai ai-google-scholar"></i>
-        </a> -->
+        </a>
       </div>
       <div class="columns is-centered has-text-centered">
         <div class="column is-8">
           <div class="content">
             <p>
-              Parts of the code for this website are reused from the <a href="https://github.com/keunhong/keunhong.github.io">source code</a> contributed by <a ref="https://keunhong.com/">Keunhong</a>.
+              This website is based on the <a
+                href="https://github.com/keunhong/keunhong.github.io">template code</a> contributed by <a
+                href="https://keunhong.com/">Keunhong</a>.
             </p>
           </div>
         </div>
