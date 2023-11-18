@@ -1,0 +1,19 @@
+# Reviewer
+- id: iclr-2023
+  role: reviewer
+  venue: ICLR, 2023
+- id: neurips-2023
+  role: reviewer
+  venue: NeurIPS, 2023
+- id: siggraph-asia-2023
+  role: reviewer
+  venue: SIGGRAPH Asia, 2023
+- id: cad-2023
+  role: reviewer
+  venue: Computer Aided Design, 2023
+- id: graphical-models-2023
+  role: reviewer
+  venue: Graphical Models, 2023
+- id: graphics-replicability-stamp-2023
+  role: reviewer
+  venue: Graphics Replicability Stamp Initiative, 2023

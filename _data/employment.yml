@@ -1,4 +1,7 @@
 - company: Amazon
-  description: Software Development Engineer Intern
+  title: Software Development Engineer Intern
+  description:
+    - Designed and built an efficient shadow testing framework, Umbra, that allows real-time evaluation of alternate product matching rules alongside the live evaluation of in-production rules.
+    - Utilized infrastructure as code and OOP principles to ensure that Umbra was scalable and compatible for other Amazon teams to use Umbra to shadow test their own services.
   dates: "Jun 2021 - Sep 2021"
   location: Seattle, WA

@@ -36,3 +36,23 @@ h2 {
         font-size: 9pt; /* changing to 10pt has no impact */
     }
 }
+
+.header-line {
+    display: flex;
+    align-items: center;
+}
+
+.underline {
+    flex-grow: 1; /* makes the div grow to take up all available space */
+    border-bottom: 2px solid black; /* adjust this to the desired thickness and color of the line */
+    height: 1.7em; /* adjust this to vertically align the line with the baseline of the h2 text */
+    margin-left: 2px;
+}
+
+ul.no-margin-padding {
+    margin-top: 0;
+    margin-bottom: 0;
+    // padding-top: 0;
+    // padding-bottom: 0;
+    padding: 0;
+}

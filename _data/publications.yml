@@ -1,3 +1,18 @@
+- id: 3dpaintbrush
+  title: "3D Paintbrush: Local Stylization of 3D Shapes with Cascaded Score Distillation"
+  venue: ArXiv, 2023
+  description: "Utilizing only a text prompt as guidance, 3D Paintbrush seamlessly generates local stylized textures on bare meshes. Our approach produces a localization map and a highly detailed texture map which conforms to it."
+  project_page: "https://threedle.github.io/3d-paintbrush/"
+  github: threedle/3d-paintbrush
+  arxiv: 2311.09571
+  image: paintbrush_before.png
+  image_mouseover: paintbrush_after.mp4
+  authors:
+    - dale
+    - itai
+    - kfir
+    - rana
+
 - id: 3dhighlighter
   title: "3D Highlighter: Localizing Regions on 3D Shapes via Text Descriptions"
   venue: CVPR, 2023
@@ -18,6 +33,7 @@
   title: "VizExtract: Automatic Relation Extraction from Data Visualizations"
   venue: ArXiv, 2021
   description: "We present a system which extracts and classifies relations between variables from images of plots."
+  project_page: "https://github.com/ddecatur/VizExtract"
   github: ddecatur/VizExtract
   arxiv: 2112.03485
   image: vizextract.png

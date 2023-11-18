@@ -24,7 +24,7 @@ position: PhD Student
 email: ddecatur@uchicago.edu
 description: >-
   I am a PhD student at the University of Chicago's [3DL (threedle)](https://3dl.cs.uchicago.edu/) lab
-  studying computer grahpics, computer vision, and deep learning.
+  studying computer graphics, 3D computer vision, and deep learning.
   I am advised by [Rana Hanocka](https://people.cs.uchicago.edu/~ranahanocka/).
 
 
@@ -43,6 +43,11 @@ plugins:
 
 sass:
   style: compact
+
+markdown: kramdown
+kramdown:
+  typographic_symbols:
+      ndash: —
 
 # Exclude from processing.
 # The following items will not be processed, by default.

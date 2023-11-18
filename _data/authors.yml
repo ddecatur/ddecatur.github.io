@@ -10,7 +10,11 @@ rana:
 itai:
   first_name: Itai 
   last_name: Lang
-  website: https://scholar.google.com/citations?user=q0bBhtsAAAAJ&hl=en
+  website: https://itailang.github.io/
+kfir:
+  first_name: Kfir
+  last_name: Aberman
+  website: https://kfiraberman.github.io/
 skr:
   first_name: Sanjay
   last_name: Krishnan
