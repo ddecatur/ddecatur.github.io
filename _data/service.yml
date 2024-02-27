@@ -1,7 +1,13 @@
 # Reviewer
-- id: iclr-2023
+- id: SIGGRAPH-2024
   role: reviewer
-  venue: ICLR, 2023
+  venue: SIGGRAPH, 2024
+- id: cvpr-2024
+  role: reviewer
+  venue: CVPR, 2024
+- id: iclr-2024
+  role: reviewer
+  venue: ICLR, 2024
 - id: neurips-2023
   role: reviewer
   venue: NeurIPS, 2023

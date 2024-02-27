@@ -1,7 +1,7 @@
 - id: 3dpaintbrush
   title: "3D Paintbrush: Local Stylization of 3D Shapes with Cascaded Score Distillation"
-  venue: ArXiv, 2023
-  description: "Utilizing only a text prompt as guidance, 3D Paintbrush seamlessly generates local stylized textures on bare meshes. Our approach produces a localization map and a highly detailed texture map which conforms to it."
+  venue: CVPR, 2024
+  description: "Our approach generates precise localizations and highly detailed local textures on meshes using text guidance."
   project_page: "https://threedle.github.io/3d-paintbrush/"
   github: threedle/3d-paintbrush
   arxiv: 2311.09571
