@@ -198,8 +198,8 @@ layout: null
                     <h2>Invited Talks</h2>
                     <div class="underline"></div>
                 </div>
+                {% for talk in site.data.talks %}
                 <div class="columns">
-                    {% for talk in site.data.talks %}
                     <div class="column is-narrow has-text-right is-1">
                         {{ talk.date }}
                     </div>
@@ -209,8 +209,8 @@ layout: null
                     <div class="column is-one-fifths has-text-right">
                         {{ talk.location }}
                     </div>
-                    {% endfor %}
                 </div>
+                {% endfor %}
 
                 <!-- SERVICE -->
                 <div class="header-line">

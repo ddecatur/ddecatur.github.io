@@ -1,5 +1,11 @@
 # Reviewer
-- id: SIGGRAPH-2024
+- id: siggraph-sia-2024
+  role: reviewer
+  venue: SIGGRAPH Asia, 2024
+- id: eccv-2024
+  role: reviewer
+  venue: ECCV, 2024
+- id: siggraph-2024
   role: reviewer
   venue: SIGGRAPH, 2024
 - id: cvpr-2024

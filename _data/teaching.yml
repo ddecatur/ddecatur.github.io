@@ -27,6 +27,11 @@
   title: Teaching Assistant
   venue: University of Chicago
   items:
+    - name: "CMSC 35401: Topics in Machine Learning - 3D Geometry Processing and Computer Vision with Deep Neural Networks"
+      bullets:
+        - text: Selected relevant papers to read and discuss for each week's class
+        - text: Led and moderated class discussion
+      dates: "Winter 2024"
     - name: "CMSC 23700: Introduction to Computer Graphics"
       bullets:
         - text: Organized and led weekly lab section
