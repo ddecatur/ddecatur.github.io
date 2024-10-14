@@ -1,3 +1,14 @@
+- id: sgi-2024
+  title: Mesh Parameterization and Texture Optimization
+  venue: MIT Summer Geometry Initiative (SGI)
+  date: 2024
+  location: Remote
+- id: cohere-2024
+  title: Text-driven localization and local editing of 3D shapes
+  venue: Cohere for AI - Community Talks
+  date: 2024
+  location: Remote
+  video: https://www.youtube.com/watch?v=OeR3h5Ad5xo&list=PLLalUvky4CLJKDaiWCumhsJpHNDhZeVll&index=2&t=195s
 - id: c3dv-2023
   title: Localizing Regions on 3D Shapes via Text Descriptions
   venue: Workshop on Compositional 3D Vision

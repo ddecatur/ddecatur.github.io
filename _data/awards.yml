@@ -1,9 +1,13 @@
+- id: nsf-fellow
+  title: NSF Graduate Research Fellowship
+  description:
+  venue: National Science Foundation
+  date: 2024
 - id: cvpr-2023-highlight
   title: CVPR Highlight Paper
   description: (top 2% of all submissions)
   venue: CVPR 2023
   date: 2023
-
 - id: hutchins-scholar
   title: Hutchins Scholar
   description: (top 10% of class)

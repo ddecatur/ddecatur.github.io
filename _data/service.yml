@@ -1,4 +1,10 @@
 # Reviewer
+- id: iclr-2025
+  role: reviewer
+  venue: ICLR, 2025
+- id: aaai-2025
+  role: reviewer
+  venue: AAAI, 2025
 - id: siggraph-sia-2024
   role: reviewer
   venue: SIGGRAPH Asia, 2024
