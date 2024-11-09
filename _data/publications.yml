@@ -1,7 +1,7 @@
 - id: iseg
   title: "iSeg: Interactive 3D Segmentation via Interactive Attention"
   venue: SIGGRAPH Asia, 2025
-  description: "An interactive technique for segmenting 3D shapes using interactive attention."
+  description: "We propose an interactive segmentation technique for 3D shapes that produces fine-grained segmentations based on user clicks."
   project_page: "https://threedle.github.io/iSeg/"
   github: threedle/iSeg
   arxiv: 2404.03219
