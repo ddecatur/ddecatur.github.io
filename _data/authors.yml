@@ -19,3 +19,11 @@ skr:
   first_name: Sanjay
   last_name: Krishnan
   website: https://people.cs.uchicago.edu/~skr
+sudarshan:
+  first_name: Sudarshan
+  last_name: Babu
+  website: https://people.cs.uchicago.edu/~sudarshan/
+fei:
+  first_name: Fei
+  last_name: Xu
+  website:

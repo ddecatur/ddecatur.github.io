@@ -1,3 +1,19 @@
+- id: iseg
+  title: "iSeg: Interactive 3D Segmentation via Interactive Attention"
+  venue: SIGGRAPH Asia, 2025
+  description: "An interactive technique for segmenting 3D shapes using interactive attention."
+  project_page: "https://threedle.github.io/iSeg/"
+  github: threedle/iSeg
+  arxiv: 2404.03219
+  image: iseg_before.png
+  image_mouseover: iseg_after.mp4
+  authors:
+    - itai
+    - fei
+    - dale
+    - sudarshan
+    - rana
+
 - id: 3dpaintbrush
   title: "3D Paintbrush: Local Stylization of 3D Shapes with Cascaded Score Distillation"
   venue: CVPR, 2024
