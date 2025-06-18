@@ -1,0 +1,11 @@
+site:
+  name: My YAML Blog
+items:
+  - slug: first-post
+    title: First Post
+    desc: This is the first post.
+    content: Welcome to the first post content.
+  - slug: second-post
+    title: Second Post
+    desc: This is the second post.
+    content: More thoughts in the second post.
