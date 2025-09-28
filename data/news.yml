@@ -1,3 +1,7 @@
+- date: June 2025
+  description: >-
+    [Reusing Computation in Text-to-Image Diffusion](https://ddecatur.github.io/hierarchical-diffusion/), a technique for sharing diffusion denoising steps between similar generations, has been accepted to ICCV 2025.
+
 - date: Apr 2024
   description: >-
     I received a National Science Foundation Graduate Research Fellowship (NSF GRFP).

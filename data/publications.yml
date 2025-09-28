@@ -1,3 +1,20 @@
+- id: hierarchical_diffusion
+  title: Reusing Computation in Text-to-Image Diffusion for Efficient Generation of Image Sets
+  venue: ICCV, 2025
+  description: "Our hierarchical diffusion shares denoising steps across correlated prompts to enable more efficient generation of image sets with diffusion models."
+  project_page: "https://ddecatur.github.io/hierarchical-diffusion/"
+  github: ddecatur/hierarchical-diffusion
+  arxiv: 2508.21032
+  image: hierarchical_diffusion_before.png
+  # image_mouseover: hierarchical_diffusion_after.mp4
+  authors:
+    - dale
+    - thibault
+    - yifan
+    - rana
+    - vova
+    - matheus
+
 - id: iseg
   title: "iSeg: Interactive 3D Segmentation via Interactive Attention"
   venue: SIGGRAPH Asia, 2024

@@ -1,37 +1,110 @@
 # Reviewer
-- id: iclr-2025
+- id: cvpr
   role: reviewer
-  venue: ICLR, 2025
-- id: aaai-2025
+  venue: CVPR
+  years: 2024, 2025
+- id: siggraph
   role: reviewer
-  venue: AAAI, 2025
-- id: siggraph-sia-2024
+  venue: SIGGRAPH
+  years: 2024, 2025
+- id: siggraph-asia
   role: reviewer
-  venue: SIGGRAPH Asia, 2024
-- id: eccv-2024
+  venue: SIGGRAPH Asia
+  years: 2023, 2024, 2025
+- id: neurips
   role: reviewer
-  venue: ECCV, 2024
-- id: siggraph-2024
+  venue: NeurIPS
+  years: 2023, 2025
+- id: iccv
   role: reviewer
-  venue: SIGGRAPH, 2024
-- id: cvpr-2024
+  venue: ICCV
+  years: 2025
+- id: iclr
   role: reviewer
-  venue: CVPR, 2024
-- id: iclr-2024
+  venue: ICLR
+  years: 2024, 2025, 2026
+- id: eccv
   role: reviewer
-  venue: ICLR, 2024
-- id: neurips-2023
+  venue: ECCV
+  years: 2024
+- id: icml
   role: reviewer
-  venue: NeurIPS, 2023
-- id: siggraph-asia-2023
+  venue: ICML
+  years: 2025
+- id: aaai
   role: reviewer
-  venue: SIGGRAPH Asia, 2023
-- id: cad-2023
+  venue: AAAI
+  years: 2025
+- id: 3dv
   role: reviewer
-  venue: Computer Aided Design, 2023
-- id: graphical-models-2023
+  venue: 3DV
+  years: 2026
+- id: cad
   role: reviewer
-  venue: Graphical Models, 2023
-- id: graphics-replicability-stamp-2023
+  venue: Computer Aided Design
+  years: 2023
+- id: graphical-models
   role: reviewer
-  venue: Graphics Replicability Stamp Initiative, 2023
+  venue: Graphical Models
+  years: 2023
+- id: graphics-replicability-stamp
+  role: reviewer
+  venue: Graphics Replicability Stamp Initiative
+  years: 2023
+# - id: 3dv-2026
+#   role: reviewer
+#   venue: 3DV 2026
+# - id: neurips-2025
+#   role: reviewer
+#   venue: NeurIPS 2025
+# - id: siggraph-asia-2025
+#   role: reviewer
+#   venue: SIGGRAPH Asia 2025
+# - id: icml-2025
+#   role: reviewer
+#   venue: ICML 2025
+# - id: iccv-2025
+#   role: reviewer
+#   venue: ICCV 2025
+# - id: siggraph-2025
+#   role: reviewer
+#   venue: SIGGRAPH 2025
+# - id: cvpr-2025
+#   role: reviewer
+#   venue: CVPR, 2025
+# - id: iclr-2025
+#   role: reviewer
+#   venue: ICLR, 2025
+# - id: aaai-2025
+#   role: reviewer
+#   venue: AAAI, 2025
+# - id: siggraph-sia-2024
+#   role: reviewer
+#   venue: SIGGRAPH Asia, 2024
+# - id: eccv-2024
+#   role: reviewer
+#   venue: ECCV, 2024
+# - id: siggraph-2024
+#   role: reviewer
+#   venue: SIGGRAPH, 2024
+# - id: cvpr-2024
+#   role: reviewer
+#   venue: CVPR, 2024
+# - id: iclr-2024
+#   role: reviewer
+#   venue: ICLR, 2024
+# - id: neurips-2023
+#   role: reviewer
+#   venue: NeurIPS, 2023
+# - id: siggraph-asia-2023
+#   role: reviewer
+#   venue: SIGGRAPH Asia, 2023
+# - id: cad-2023
+#   role: reviewer
+#   venue: Computer Aided Design, 2023
+# - id: graphical-models-2023
+#   role: reviewer
+#   venue: Graphical Models, 2023
+# - id: graphics-replicability-stamp-2023
+#   role: reviewer
+#   venue: Graphics Replicability Stamp Initiative, 2023

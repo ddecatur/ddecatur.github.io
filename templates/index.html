@@ -2,16 +2,14 @@
 <html lang="en-US">
 <head>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>{{ data.site.title }}</title>
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="title">
-            <!-- <b>{{ data.site.title }}</b> -->
-        </h1>
-    </header>
     <!-- Profile / bio section -->
     <section class="section">
         <div class="container">
@@ -29,26 +27,30 @@
                         {{ data.me.bio | safe }}
                     </div>
                     <div class="button-row">
-                        <!-- <a class="external-link button is-light is-link" href="cv.html">
+                        <!-- <a class="button transparent" href="cv.html">
                             <span class="icon"><i class="fas fa-file"></i></span>
                             <span>CV</span>
                         </a> -->
-                        <a class="external-link button is-light is-link"
+                        <a class="button transparent"
                             href="https://scholar.google.com/citations?user={{ data.me.google_scholar }}">
                             <span class="icon"><i class="ai ai-google-scholar"></i></span>
-                            <span>Scholar</span>
+                            <!-- <span>Scholar</span> -->
                         </a>
-                        <a class="external-link button is-light is-link" href="https://github.com/{{ data.me.github_username }}">
+                        <a class="button transparent" href="https://github.com/{{ data.me.github_username }}">
                             <span class="icon"><i class="fab fa-github"></i></span>
-                            <span>Github</span>
+                            <!-- <span>Github</span> -->
                         </a>
-                        <a class="external-link button is-light is-link" href="mailto:{{ data.me.email }}">
+                        <a class="button transparent" href="mailto:{{ data.me.email }}">
                             <span class="icon"><i class="fas fa-envelope"></i></span>
-                            <span>Email</span>
+                            <!-- <span>Email</span> -->
                         </a>
-                        <a class="external-link button is-light is-link" href="https://twitter.com/{{ data.me.twitter_username }}">
+                        <!-- <a class="button transparent" href="https://twitter.com/{{ data.me.twitter_username }}">
                             <span class="icon"><i class="fab fa-twitter"></i></span>
                             <span>X/Twitter</span>
+                        </a> -->
+                        <a class="button transparent" href="https://bsky.app/profile/{{ data.me.bluesky_username }}.bsky.social">
+                            <span class="icon"><i class="fa-brands fa-bluesky"></i></span>
+                            <!-- <span>bluesky</span> -->
                         </a>
                     </div>
                 </div>
@@ -115,23 +117,23 @@
                     <p class="publication-description">{{ publication.description }}</p>
                     <!-- Publication Links. -->
                     <div class="publication-links buttons field">
-                        <a class="external-link button is-small is-light is-link is-rounded"
+                        <a class="button"
                         href="{{ publication.project_page }}">
                         <span class="icon"><i class="fas fa-globe-americas"></i></span>
                         <span>Project Page</span>
                         </a>
-                        <a class="external-link button is-small is-light is-link is-rounded"
+                        <a class="button"
                         href="https://arxiv.org/pdf/{{ publication.arxiv }}.pdf">
                         <span class="icon"><i class="fas fa-file-pdf"></i></span>
                         <span>PDF</span>
                         </a>
-                        <a class="external-link button is-small is-light is-link is-rounded"
+                        <a class="button"
                         href="https://arxiv.org/abs/{{ publication.arxiv }}">
                         <span class="icon"><i class="ai ai-arxiv"></i></span>
                         <span>arXiv</span>
                         </a>
                         {% if publication.github %}
-                        <a class="external-link button is-small is-light is-link is-rounded"
+                        <a class="button"
                         href="https://github.com/{{ publication.github }}">
                         <span class="icon"><i class="fa fab fa-github"></i></span>
                         <span>Code</span>
@@ -150,14 +152,13 @@
         <div class="container">
             <h2 class="title">Service</h2>
             <hr style="border: 1px solid #000">
-
             <div class="row">
                 <div class="column">
                     <div class="service-role">Reviewer</div>
                     <div class="service-list">
                         {% for service in data.service %}
                         {% if service.role == "reviewer" %}
-                            <div class="service-item">{{ service.venue }}</div>
+                            <div class="service-item">{{ service.venue }}: {{service.years}}</div>
                         {% endif %}
                         {% endfor %}
                     </div>
