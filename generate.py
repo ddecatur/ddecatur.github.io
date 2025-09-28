@@ -28,7 +28,7 @@ def load_yaml_data(data_dir="data"):
     return site_data
 
 # Render all pages using Jinja2
-def render_site(site_data, templates_dir="templates", output_dir="output"):
+def render_site(site_data, templates_dir="templates", output_dir="docs"):
     env = Environment(loader=FileSystemLoader(templates_dir))
     # Register custom filter
     env.filters['markdownify'] = lambda text: markdown.markdown(text)
@@ -50,36 +50,10 @@ def render_site(site_data, templates_dir="templates", output_dir="output"):
         with open(os.path.join(output_dir, template_file), "w") as f:
             f.write(index_template.render(data=site_data))
 
-    # for section_name, section_data in site_data.items():
-    #     section_items = []
-
-    #     for item in section_data.get("items", []):
-    #         output_filename = f"{item['slug']}.html"
-    #         item["output_filename"] = output_filename
-
-    #         html = cv_template.render(
-    #             site_title=section_data.get("site_title", "Untitled"),
-    #             section=section_name,
-    #             **item
-    #         )
-
-    #         with open(os.path.join(output_dir, output_filename), "w") as f:
-    #             f.write(html)
-
-    #         section_items.append(item)
-
-    #     all_items_for_index.append({
-    #         "label": section_data.get("site_title", section_name.title()),
-    #         "section": section_name,
-    #         "items": section_items
-    #     })
-    # pprint.pprint(site_data)
-    # Render the homepage index
-    
-
-    print("✅ Site generated in:", output_dir)
+    print("Site generated in:", output_dir)
 
 if __name__ == "__main__":
+    output_dir = "docs"
     data = load_yaml_data("data")
-    render_site(data, templates_dir="templates", output_dir="output")
-    shutil.copytree("static", "output", dirs_exist_ok=True)
+    render_site(data, templates_dir="templates", output_dir=output_dir)
+    shutil.copytree("static", output_dir, dirs_exist_ok=True)
