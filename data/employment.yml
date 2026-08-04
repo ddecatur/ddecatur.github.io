@@ -1,12 +1,10 @@
-- company: Adobe
+- company: Adobe Research
   title: Research Scientist Intern
-  description:
+  description: Developed a method for sharing computation across denoising steps in diffusion models to enable more computationally efficient generation of image sets.
   dates: "May 2024 - Aug 2024"
   location: Seattle, WA
 - company: Amazon
   title: Software Development Engineer Intern
-  description:
-    - Designed and built an efficient shadow testing framework, Umbra, that allows real-time evaluation of alternate product matching rules alongside the live evaluation of in-production rules.
-    - Utilized infrastructure as code and OOP principles to ensure that Umbra was scalable and compatible for other Amazon teams to use Umbra to shadow test their own services.
+  description: Designed and built an efficient and scalable shadow testing framework, Umbra, that allows real-time evaluation of alternate product matching rules alongside the live evaluation of in-production rules.
   dates: "Jun 2021 - Sep 2021"
   location: Seattle, WA

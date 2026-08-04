@@ -1,6 +1,5 @@
 old_code/
-
 .DS_Store
-
-# Byte-compiled / optimized / DLL files
 __pycache__/
+/templates/cv.html
+*/css/old

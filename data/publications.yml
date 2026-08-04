@@ -1,3 +1,22 @@
+- id: bsb
+  title: "Best Segmentation Buddies for Image-Shape Correspondence"
+  venue: CVPR, 2026
+  description: "Best Segmentation Buddies computes segment-to-segment correspondence across different modalities."
+  project_page: "https://threedle.github.io/bsb/"
+  github: threedle/bsb
+  arxiv: 2508.21032
+  image: bsb_before.png
+  image_mouseover: bsb_after.mp4
+  published: true
+  authors:
+    - itai
+    - dongwei
+    - dale
+    - rana
+  equal_contribution:
+    - itai
+    - dongwei
+
 - id: hierarchical_diffusion
   title: Reusing Computation in Text-to-Image Diffusion for Efficient Generation of Image Sets
   venue: ICCV, 2025
@@ -6,7 +25,7 @@
   github: ddecatur/hierarchical-diffusion
   arxiv: 2508.21032
   image: hierarchical_diffusion_before.png
-  # image_mouseover: hierarchical_diffusion_after.mp4
+  published: true
   authors:
     - dale
     - thibault
@@ -24,6 +43,7 @@
   arxiv: 2404.03219
   image: iseg_before.png
   image_mouseover: iseg_after.mp4
+  published: true
   authors:
     - itai
     - fei
@@ -40,6 +60,7 @@
   arxiv: 2311.09571
   image: paintbrush_before.png
   image_mouseover: paintbrush_after.mp4
+  published: true
   authors:
     - dale
     - itai
@@ -55,6 +76,7 @@
   arxiv: 2212.11263
   image: highlighter_before.png
   image_mouseover: highlighter_after.mp4
+  published: true
   authors:
     - dale
     - itai
@@ -66,10 +88,11 @@
   title: "VizExtract: Automatic Relation Extraction from Data Visualizations"
   venue: ArXiv, 2021
   description: "We present a system which extracts and classifies relations between variables from images of plots."
-  project_page: "https://github.com/ddecatur/VizExtract"
+  project_page: "https://arxiv.org/abs/2112.03485"
   github: ddecatur/VizExtract
   arxiv: 2112.03485
   image: vizextract.png
+  published: false
   authors:
     - dale
     - skr

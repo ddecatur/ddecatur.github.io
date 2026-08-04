@@ -1,34 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root {
+  /* --- previous color scheme (commented out) ---
   --dale-blue: #9EBEC9;
   --accent-color: #6a8993;
   --accent-dark: #4E6770;
   --accent-light: #BFD8DB;
   --light-purple: #9698c3;
-  --buttonshadowsz: 0px 4px 0px 0px;
-  --buttonshadowbigsz: 0px 5px 0px;
   --dropshadow: 3px 3px 15px #433f3f48;
-  --buttontransform: translate(0px, 1.5px);
-  /* --notwhite: #f5f5f5; */
   --notwhite: #FFFFFF;
   --notwhite-shaded: #A8ABAA;
+  */
+
+  /* l2c color scheme (from /Users/daledecatur/Desktop/Research/l2c-private/style.css) */
+  --accent: #69829E;
+  --accent-shaded: #A2B3C2;
+  --accentlight: #537998;
+  --shadowlight: 0px 0px 4px var(--accentlight);
+  --accentbg: #e9f0f7;
+  --accentbg-shaded: color-mix(in oklab, var(--accentbg) 70%, #46579b 30%);
+  --notwhite: #f5f5f5;
+  --notwhite-shaded: #aea9a3;
+  --dropshadow: 3px 3px 15px #23232348;
+
+  /* legacy names mapped to l2c variables */
+  --dale-blue: var(--accent);
+  --accent-color: var(--accent);
+  --accent-dark: var(--accentlight);
+  --accent-light: var(--accent-shaded);
+  --light-purple: var(--accent);
+  --text-color: var(--fore);
+  --link-color: var(--accent-color);
+
+  --buttonshadowsz: 0px 4px 0px 0px;
+  --buttonshadowbigsz: 0px 5px 0px;
+  --buttontransform: translate(0px, 1.5px);
   --fore: #363636;
   --bordrad: 10px;
   --accentbordersz: 1px none;
   --halfwidthflex-w: 90%;
   --medwidthflex-w: 100%;
   --eqnwidthmult: 0.95;
-  --text-color: #363636;
-  --link-color: var(--accent-color);
-  /* --link-color: var(--dale-blue); */
-  /* --primary-color: #493694; */
-  /* --primary-color: #58695d; */
-  /* --primary-color: #4e5f53; */
-  /* --accent-color: #90b4bc; */
-  /* --link-color: #5D7963; */
-  /* --accent-color: #d6d6e7; */
-  /* --text-color: #333; */
 }
 
 *,
@@ -38,7 +50,7 @@
 }
 
 body {
-  /* margin: 0; */
+  margin: 0;
   font-family: "Source Sans 3", system-ui, -apple-system, sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -47,6 +59,9 @@ body {
   background-color: #FFFFFF;
   /* background-color: var(--dale-blue); */
   color: var(--text-color);
+  padding-top: 38px;
+  /* border-top: 36px solid var(--accent-color); */
+  /* border-top: 36px solid #FFFFFF; */
   /* line-height: 1.5; or 1.5, 1.4, etc. Adjust to your preference */
 }
 
@@ -109,8 +124,44 @@ nav {
 
   }
 
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 38px;
+  z-index: 1000;
+  background-color: var(--accent-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+  row-gap: 0;
+  padding: 0 20px;
+}
+
+.top-nav a,
+.top-nav a:not(.button),
+.top-nav a:not(.button):hover,
+.top-nav a:not(.button):visited {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .section {
   padding: 10px 20px;
+  scroll-margin-top: 46px;
 }
 
 .container {
@@ -284,6 +335,8 @@ a:not(.button):hover {  /* mouse hover */
 
 .publication-block .publication-authors a:hover { text-decoration: underline; }
 
+.publication-block .equal-contribution-note { color: #555; font-size: 90%; margin-top: 0.15em; }
+
 /* .publication-block .publication-image { border-radius: 2%; width: 100%; height: auto; overflow: hidden; font-size: 0; box-shadow: 0px 0px 15px #b4b4b4; -moz-box-shadow: 0px 0px 15px #b4b4b4; -webkit-box-shadow: 0px 0px 15px #b4b4b4; -khtml-box-shadow: 0px 0px 15px #b4b4b4; }
 
 .publication-block .publication-image img { width: 100%; }
@@ -345,14 +398,14 @@ a:not(.button):hover {  /* mouse hover */
   display: block;
 }
 
-/* Hover behavior: swap image for video */
-.publication-block .publication-mousecell video {
+/* Hover behavior: swap base media for hover media (image or video) */
+.publication-block .publication-mousecell .hover-media {
   display: none;
 }
-.publication-block .publication-mousecell:hover video {
+.publication-block .publication-mousecell:hover .hover-media {
   display: block;
 }
-.publication-block .publication-mousecell:hover img {
+.publication-block .publication-mousecell:hover .base-media {
   display: none;
 }
 
@@ -360,6 +413,74 @@ a:not(.button):hover {  /* mouse hover */
 
 .publication-block .publication-links { margin: 0 !important; margin-top: 0.5em !important; }
 
+
+.talk-block {
+  margin: 1em 0;
+}
+
+.talk-block .talk-event {
+  color: #000;
+  font-weight: 600;
+  font-size: 110%;
+}
+
+.talk-block .talk-title {
+  color: #333;
+  font-style: italic;
+  margin-top: 0.15em;
+}
+
+.talk-block .talk-venue {
+  color: #555;
+  margin-top: 0.15em;
+}
+
+.publication-block .publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.publication-block .publication-links .button {
+  padding: 4px 14px;
+  border: 1.5px solid var(--accent-color);
+  transition: background-color 0.24s, color 0.24s;
+}
+
+.publication-block .publication-links .button:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.talk-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0.5em 0 0 0;
+}
+
+.talk-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 14px;
+  border: 1.5px solid var(--accent-color);
+  border-radius: 8px;
+  color: var(--accent-color);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.24s, color 0.24s;
+}
+
+.talk-button:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+a.talk-button:hover {
+  color: #fff;
+  text-decoration: none;
+}
 
 .service-role {
   font-weight: bold;
@@ -382,6 +503,47 @@ h2.title {
 hr {
   border: 1px solid #000;
   margin: 0.3em 0 0.3em 0;
+}
+
+.news-list {
+  flex: 0 0 100%;
+  margin-bottom: 0;
+  list-style: none;
+  padding-left: 10px;
+}
+
+.news-item {
+  display: flex;
+  align-items: baseline;
+}
+
+.news-item[hidden] {
+  display: none;
+}
+
+.news-date {
+  flex: 0 0 5.5em;
+  white-space: nowrap;
+  padding-right: 0.75em;
+}
+
+.news-body {
+  flex: 1 1 auto;
+}
+
+.news-toggle {
+  flex: 0 0 100%;
+  display: block;
+  width: fit-content;
+  margin-top: 0;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--link-color);
+}
+
+.news-toggle:hover {
+  text-decoration: underline;
 }
 
 hr + div.row {

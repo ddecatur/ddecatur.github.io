@@ -1,6 +1,22 @@
-- date: June 2025
+- date: Jun 2026
   description: >-
-    [Reusing Computation in Text-to-Image Diffusion](https://ddecatur.github.io/hierarchical-diffusion/), a technique for sharing diffusion denoising steps between similar generations, has been accepted to ICCV 2025.
+    Presented *Geometry Processing from 2D Image Priors* at the SGP 2026 Graduate School with Richard and Nam Anh.
+
+- date: Jun 2026
+  description: >-
+    Started an internship at Adobe Research (London).
+
+- date: Feb 2026
+  description: >-
+    [Best Segmentation Buddies](https://threedle.github.io/bsb/){target="_blank" rel="noopener noreferrer"} has been accepted to CVPR 2026.
+
+- date: Jun 2025
+  description: >-
+    [Reusing Computation in Text-to-Image Diffusion](https://ddecatur.github.io/hierarchical-diffusion/){target="_blank" rel="noopener noreferrer"} has been accepted to ICCV 2025.
+
+- date: Aug 2024
+  description: >-
+    [iSeg: Interactive 3D Segmentation via Interactive Attention](https://threedle.github.io/iSeg/){target="_blank" rel="noopener noreferrer"} has been accepted to SIGGRAPH Asia 2024.
 
 - date: Apr 2024
   description: >-
@@ -8,18 +24,8 @@
 
 - date: Feb 2024
   description: >-
-    [3D Paintbrush](https://threedle.github.io/3d-paintbrush/) has been accepted to CVPR 2024.
-
-- date: Nov 2023
-  description: >-
-    We present [3D Paintbrush](https://threedle.github.io/3d-paintbrush/),
-    which produces precise localizations and highly-detailed local textures on meshes.
+    [3D Paintbrush](https://threedle.github.io/3d-paintbrush/){target="_blank" rel="noopener noreferrer"} has been accepted to CVPR 2024.
 
 - date: Feb 2023
   description: >-
-    [3D Highlighter](https://threedle.github.io/3DHighlighter/) has been accepted to CVPR 2023 as a highlight paper.
-
-- date: Dec 2022
-  description: >-
-    We present [3D Highlighter](https://threedle.github.io/3DHighlighter/),
-    which localizes regions on 3D shapes via text descriptions.
+    [3D Highlighter](https://threedle.github.io/3DHighlighter/){target="_blank" rel="noopener noreferrer"} has been accepted to CVPR 2023 as a highlight paper.

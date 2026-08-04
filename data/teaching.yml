@@ -1,40 +1,19 @@
-# Mentor
-- id: Mentor
-  title: Research Supervisor and Mentor
-  venue: University of Chicago
-  items:
-    - name: Graduate Students
-      bullets:
-        - subject: Fei Xu, 2023
-          text: Mesh Segmentation
-          # dates: Summer 2023 - Present
-    - name: Undergraduate Students
-      bullets:
-        - subject: Douglas Williams, 2023
-          text: Adaptive Mesh Stylization
-          # dates: Winter 2022 - Present
-        - subject: Nathan Chortek, 2023
-          text: Differentiable Rendering
-          # dates: Fall 2023 - Present
-    - name: High School Students
-      bullets:
-        - subject: Luke Collins, 2022
-          text: Amortized Mesh Stylization
-          # dates: Summer 2022 - Fall 2022
-
 # Teaching
-- id: uchicago-ta
+- id: cmsc35401
+  name: "CMSC 35401: Topics in Machine Learning - 3D Geometry Processing and Computer Vision with Deep Neural Networks"
   title: Teaching Assistant
   venue: University of Chicago
-  items:
-    - name: "CMSC 35401: Topics in Machine Learning - 3D Geometry Processing and Computer Vision with Deep Neural Networks"
-      bullets:
-        - text: Selected relevant papers to read and discuss for each week's class
-        - text: Led and moderated class discussion
-      dates: "Winter 2024"
-    - name: "CMSC 23700: Introduction to Computer Graphics"
-      bullets:
-        - text: Organized and led weekly lab section
-        - text: Designed programming projects
-        - text: Held office hours
-      dates: "Spring 2023"
+  dates: "Winter 2024"
+  description:
+    - Designed syllabus and course structure
+    - Selected relevant papers to read and discuss for each week's class
+    - Led and moderated class discussion
+- id: cmsc23700
+  name: "CMSC 23700: Introduction to Computer Graphics"
+  title: Teaching Assistant
+  venue: University of Chicago
+  dates: "Spring 2023"
+  description:
+    - Organized and led weekly lab section
+    - Designed programming projects
+    - Held office hours

@@ -10,8 +10,17 @@
 </head>
 
 <body>
+    <!-- Top section navigation -->
+    <div class="top-nav">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#research">Research</a>
+        <a href="#talks">Talks</a>
+        <a href="#service">Service</a>
+    </div>
+
     <!-- Profile / bio section -->
-    <section class="section">
+    <section class="section" id="about">
         <div class="container">
             <div class="row">
                 <div class="column col-2-5">
@@ -31,12 +40,12 @@
                             <span class="icon"><i class="fas fa-file"></i></span>
                             <span>CV</span>
                         </a> -->
-                        <a class="button transparent"
+                        <a class="button transparent" target="_blank" rel="noopener noreferrer"
                             href="https://scholar.google.com/citations?user={{ data.me.google_scholar }}">
                             <span class="icon"><i class="ai ai-google-scholar"></i></span>
                             <!-- <span>Scholar</span> -->
                         </a>
-                        <a class="button transparent" href="https://github.com/{{ data.me.github_username }}">
+                        <a class="button transparent" target="_blank" rel="noopener noreferrer" href="https://github.com/{{ data.me.github_username }}">
                             <span class="icon"><i class="fab fa-github"></i></span>
                             <!-- <span>Github</span> -->
                         </a>
@@ -48,7 +57,7 @@
                             <span class="icon"><i class="fab fa-twitter"></i></span>
                             <span>X/Twitter</span>
                         </a> -->
-                        <a class="button transparent" href="https://bsky.app/profile/{{ data.me.bluesky_username }}.bsky.social">
+                        <a class="button transparent" target="_blank" rel="noopener noreferrer" href="https://bsky.app/profile/{{ data.me.bluesky_username }}.bsky.social">
                             <span class="icon"><i class="fa-brands fa-bluesky"></i></span>
                             <!-- <span>bluesky</span> -->
                         </a>
@@ -64,13 +73,30 @@
             <h2 class="title">News</h2>
             <hr style="border: 1px solid #000">
             <div class="row">
-                <ul>
+                <ul class="news-list">
                     {% for news in data.news %}
-                    <li>
-                        <b>{{ news.date }}</b>: {{ news.description | markdownify | replace('<p>', '') | replace('</p>', '') }}
+                    <li class="news-item{% if loop.index > 5 %} news-extra{% endif %}"{% if loop.index > 5 %} hidden{% endif %}>
+                        <span class="news-date"><b>{{ news.date }}</b></span>
+                        <span class="news-body">{{ news.description | markdownify | replace('<p>', '') | replace('</p>', '') }}</span>
                     </li>
                     {% endfor %}
                 </ul>
+                {% if data.news|length > 5 %}
+                <a href="#news" id="news-toggle" class="news-toggle" onclick="toggleNews(event)">show more</a>
+                <script>
+                    function toggleNews(e) {
+                        e.preventDefault();
+                        var extras = document.querySelectorAll('.news-extra');
+                        var btn = document.getElementById('news-toggle');
+                        var hidden = extras[0].hasAttribute('hidden');
+                        for (var i = 0; i < extras.length; i++) {
+                            if (hidden) extras[i].removeAttribute('hidden');
+                            else extras[i].setAttribute('hidden', '');
+                        }
+                        btn.textContent = hidden ? 'show less' : 'show more';
+                    }
+                </script>
+                {% endif %}
             </div>
         </div>
     </section>
@@ -84,13 +110,17 @@
             <div class="publication-block columns">
                 <div class="column col-1-5">
                     <div class="publication-image {% if publication.image_mouseover %}publication-mousecell{% endif %}">
-                        {% if "mp4" in publication.image_mouseover %}
-                        <video autoplay preload playsinline class="" height="100%" loop muted width="100%">
-                            <source src="videos/{{ publication.image_mouseover }}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        {% if publication.image_mouseover %}
+                            {% if "mp4" in publication.image_mouseover %}
+                            <video autoplay preload playsinline class="hover-media" height="100%" loop muted width="100%">
+                                <source src="videos/{{ publication.image_mouseover }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            {% else %}
+                            <img class="hover-media" alt="{{ publication.title }}" src="/images/{{ publication.image_mouseover }}"/>
+                            {% endif %}
                         {% endif %}
-                        <img alt="{{ publication.title }}" src="/images/{{ publication.image }}"/>
+                        <img class="base-media" alt="{{ publication.title }}" src="/images/{{ publication.image }}"/>
                     </div>
                 </div>
                 <div class="column col-4-5">
@@ -104,10 +134,14 @@
                         {%- else -%}
                             <a href="{{ author.website }}">{{ author.first_name }} {{ author.middle_name }} {{ author.last_name }}</a>
                         {%- endif -%}
+                        {%- if publication.equal_contribution and author_id in publication.equal_contribution %}*{% endif -%}
                         {%- if not loop.last %},{% endif %}
                         </span>
                     {% endfor %}
                     </div>
+                    {% if publication.equal_contribution %}
+                    <div class="equal-contribution-note">(*Equal contribution)</div>
+                    {% endif %}
                     <div class="publication-venue">
                         <span>{{ publication.venue }}</span>
                         {% for award in publication.awards %}
@@ -117,23 +151,23 @@
                     <p class="publication-description">{{ publication.description }}</p>
                     <!-- Publication Links. -->
                     <div class="publication-links buttons field">
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="{{ publication.project_page }}">
                         <span class="icon"><i class="fas fa-globe-americas"></i></span>
                         <span>Project Page</span>
                         </a>
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://arxiv.org/pdf/{{ publication.arxiv }}.pdf">
                         <span class="icon"><i class="fas fa-file-pdf"></i></span>
                         <span>PDF</span>
                         </a>
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://arxiv.org/abs/{{ publication.arxiv }}">
                         <span class="icon"><i class="ai ai-arxiv"></i></span>
                         <span>arXiv</span>
                         </a>
                         {% if publication.github %}
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://github.com/{{ publication.github }}">
                         <span class="icon"><i class="fa fab fa-github"></i></span>
                         <span>Code</span>
@@ -142,6 +176,31 @@
                     </div>
                     <!--/ Publication Links. -->
                 </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Talks section -->
+    <section class="section" id="talks">
+        <div class="container">
+            <h2 class="title">Talks</h2>
+            <hr style="border: 1px solid #000">
+            {% for talk in data.talks %}
+            <div class="talk-block">
+                <div class="talk-event">{{ talk.event }}</div>
+                <div class="talk-title">{{ talk.title }}</div>
+                <div class="talk-venue">{{ talk.venue }}{% if talk.years %} &middot; {% if talk.years|length > 1 %}{{ talk.years|min }}&ndash;{{ talk.years|max }}{% else %}{% if talk.month %}{{ talk.month }} {% endif %}{{ talk.years[0] }}{% endif %}{% endif %}</div>
+                <!-- Talk Links. -->
+                <!-- <div class="talk-links buttons field">
+                    {% if talk.slides %}
+                    <a class="talk-button" target="_blank" rel="noopener noreferrer" href="{{ talk.slides }}">Slides</a>
+                    {% endif %}
+                    {% if talk.recording %}
+                    <a class="talk-button" target="_blank" rel="noopener noreferrer" href="{{ talk.recording }}">Recording</a>
+                    {% endif %}
+                </div> -->
+                <!--/ Talk Links. -->
             </div>
             {% endfor %}
         </div>
@@ -156,11 +215,7 @@
                 <div class="column">
                     <div class="service-role">Reviewer</div>
                     <div class="service-list">
-                        {% for service in data.service %}
-                        {% if service.role == "reviewer" %}
-                            <div class="service-item">{{ service.venue }}: {{service.years}}</div>
-                        {% endif %}
-                        {% endfor %}
+                        <div class="service-item">{{ data.service | selectattr("role", "equalto", "reviewer") | map(attribute="venue") | join(", ") }}</div>
                     </div>
                 </div>
             </div>

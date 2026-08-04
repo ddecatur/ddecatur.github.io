@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>{{ data.site.title }}</title>
+
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link href="./css/old/fontawesome.all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
+    <link href="./css/old/bulma.min.css" rel="stylesheet">
+    <!-- <link href="./css/old/main.css" rel="stylesheet"> -->
+    <link href="./css/old/cv.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="./css/old/fontawesome.all.min.js"></script>
+</head>
+
+<body>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-vcentered">
+                <div class="column">
+                    <h1 class="title is-2">{{ data.me.name }}</h1>
+                    <h1 class="subtitle is-5">{{ data.me.position }}</h1>
+                </div>
+                <div class="column is-narrow portrait-column">
+                    <img class="portrait-image" src="{{ '/images/portrait.JPG' }}"
+                        alt="A portrait of Dale Decatur" />
+                </div>
+                <div class="column has-text-right">
+                    <p>
+                        <!-- <a href="{{ data.site.url }}"> -->
+                        <a href="https://ddecatur.github.io/">
+                            <i class="fas fa-home"></i>
+                            <!-- {% set url_parts = data.site.url.split('://') %}
+                            {{ url_parts[1] }} -->
+                            ddecatur.github.io
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/{{ data.me.github_username }}">
+                            <i class="fab fa-github"></i>
+                            {{ data.me.github_username }}
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:{{ data.me.email }}">
+                            <i class="fas fa-envelope"></i>
+                            {{ data.me.email }}
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="header-line">
+                    <h2>Education</h2>
+                    <div class="underline"></div>
+                </div>
+                {% for school in data.education %}
+                <div class="columns">
+                    <div class="column is-four-fifths">
+                        <b>{{school.degree}}, {{ school.name }}</b><br />
+                        {{ school.description }}
+                    </div>
+                    <div class="column has-text-right">
+                        {{ school.location }} <br />
+                        {{ school.dates }}
+                    </div>
+                </div>
+                {% endfor %}
+
+                <!-- PUBLICATIONS -->
+                <div class="header-line">
+                    <h2>Publications</h2>
+                    <div class="underline"></div>
+                </div>
+                {% for publication in data.publications %}
+                <div class="columns">
+                    <div class="column is-four-fifths">
+                        <a href="{{ publication.project_page }}"><b>{{ publication.title }}</b></a>
+                        <div class="publication-authors">
+                            {% for author_id in publication.authors %}
+                            {% set author = data.authors[author_id] %}
+                            <span class="author-block {% if author.is_me %}author-me{% endif %}">
+                                {% if author.is_me -%}
+                                {{ author.first_name[0] }}. {{ author.last_name }}
+                                {%- else -%}
+                                <a href="{{ author.website }}">{{ author.first_name[0] }}. {{ author.last_name }}</a>
+                                {%- endif -%}
+                                {%- if publication.equal_contribution and author_id in publication.equal_contribution %}*{% endif -%}
+                                {%- if not loop.last %},{% endif %}
+                            </span>
+                            {% endfor %}
+                        </div>
+                        {% if publication.equal_contribution %}
+                        <div class="equal-contribution-note">(*Equal contribution)</div>
+                        {% endif %}
+                        {{ publication.description }}
+                    </div>
+                    <div class="column is-one-fifth has-text-right">
+                        {{ publication.venue }}
+                    </div>
+                </div>
+                <!-- {% if publication.published %} -->
+                <!-- {% endif %} -->
+                {% endfor %}
+                <!-- <div class="header-line">
+                    <h2>ArXiv Publications</h2>
+                    <div class="underline"></div>
+                </div>
+                {% for publication in data.publications %}
+                {% if not publication.published %}
+                <div class="columns">
+                    <div class="column is-four-fifths">
+                        <a href="{{ publication.project_page }}"><b>{{ publication.title }}</b></a>
+                        <div class="publication-authors">
+                            {% for author_id in publication.authors %}
+                            {% set author = data.authors[author_id] %}
+                            <span class="author-block {% if author.is_me %}author-me{% endif %}">
+                                {% if author.is_me -%}
+                                {{ author.first_name[0] }}. {{ author.last_name }}
+                                {%- else -%}
+                                <a href="{{ author.website }}">{{ author.first_name[0] }}. {{ author.last_name }}</a>
+                                {%- endif -%}
+                                {%- if publication.equal_contribution and author_id in publication.equal_contribution %}*{% endif -%}
+                                {%- if not loop.last %},{% endif %}
+                            </span>
+                            {% endfor %}
+                        </div>
+                        {% if publication.equal_contribution %}
+                        <div class="equal-contribution-note">(*Equal contribution)</div>
+                        {% endif %}
+                        {{ publication.description }}
+                    </div>
+                    <div class="column is-one-fifth has-text-right">
+                        {{ publication.venue }}
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %} -->
+
+                <!-- EMPLOYMENT -->
+                <div class="header-line">
+                    <h2>Employment</h2>
+                    <div class="underline"></div>
+                </div>
+                {% for job in data.employment %}
+                <!-- {% if job.company|default('')|trim|lower == 'amazon' %}
+                    <div class="page-break"></div>
+                {% endif %} -->
+                <div class="columns">
+                    <div class="column is-four-fifths">
+                        <!-- <span style="font-size: 1.3rem; line-height: 1.2; font-weight: 700;">
+                            {{ job.company }}
+                        </span><br /> -->
+                        <h5 style="margin-bottom: 0;">{{ job.company }}</h5>
+                        <b>{{ job.title }}</b><br />
+                        {% set description = job.description | default([], true) %}
+                        {% if description %}
+                            {{ description }}
+                        {% endif %}
+                    </div>
+                    <div class="column is-one-fifth has-text-right">
+                        {{ job.location }}
+                        <br />
+                        {{ job.dates }}
+                    </div>
+                </div>
+                {% endfor %}
+
+                <!-- AWARDS -->
+                <!-- <div class="page-break"></div> -->
+                <div class="header-line">
+                    <h2>Honors and Awards</h2>
+                    <div class="underline"></div>
+                </div>
+                {% for award in data.awards %}
+                <div class="columns">
+                    <div class="column is-narrow has-text-right is-1">
+                        {{ award.date }}
+                    </div>
+                    {% set award_description = award.description | default([], true) %}
+                    {% if award_description %}
+                        <div class="column is-narrow">
+                            <b>{{ award.title }}</b> {{ award.description}}
+                        </div>
+                    {% else %}
+                        <div class="column is-narrow">
+                            <b>{{ award.title }}</b>
+                        </div>
+                    {% endif %}
+                    <div class="column has-text-right">
+                        {{ award.venue }}
+                    </div>
+                </div>
+                <!-- <div class="columns"><div class="column"></div></div> -->
+                {% endfor %}
+
+                <!-- TALKS -->
+                <div class="header-line">
+                    <h2>Invited Talks</h2>
+                    <div class="underline"></div>
+                </div>
+                {% for talk in data.talks_cv %}
+                <div class="columns">
+                    <div class="column is-narrow has-text-right is-1">
+                        {{ talk.year }}
+                    </div>
+                    <div class="column is-narrow">
+                        <b>{{ talk.event }}.</b> {{talk.title}}.
+                    </div>
+                    <div class="column has-text-right">
+                        {{ talk.venue }}
+                    </div>
+                </div>
+                {% endfor %}
+
+                <!-- TEACHING -->
+                <div class="header-line">
+                    <h2>Teaching</h2>
+                    <div class="underline"></div>
+                </div>
+                {% for role in data.teaching %}
+                <div class="columns">
+                    <div class="column is is-four-fifths">
+                        <h6 style="margin-bottom: 0;">{{ role.name }}, {{ role.title }}</h5>
+                        <ul style="margin-top: 0.3rem;">
+                        {% for item in role.description %}
+                            <li>{{ item }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="column is-one-fifth has-text-right">
+                        {{ role.venue }}
+                        <br />
+                        {{ role.dates }}
+                    </div>
+                </div>
+                {% endfor %}
+
+                <!-- SERVICE -->
+                <div class="header-line">
+                    <h2>Service</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <h5 style="margin-bottom: 0;">Mentor</h5>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column is-three-fifths">
+                        {% for service in data.service %}
+                            {% if service.role == "mentor" %}
+                                {{ service.student }}, {{ service.title}} &mdash; <b>{{ service.project }}</b><br />
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="column is-two-fifths has-text-right">
+                        {% for service in data.service %}
+                            {% if service.role == "mentor" %}
+                                {{ service.years }}<br />
+                            {% endif %}
+                        {% endfor %}
+
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <h5 style="margin-bottom: 0;">Reviewer</h5>
+                        <div class="column">
+                            {% for service in data.service %}
+                                {% if service.role == "reviewer" %}
+                                    <div class="service-item  ml-1"><b>{{ service.venue }}:</b> {{ service.years }}</div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="header-line">
+                    <h2>Skills</h2>
+                    <div class="underline"></div>
+                </div>
+                <!-- <div class="columns is-flex-direction-column"> -->
+                <div class="columns">
+                    <div class="column is-narrow has-text-right">
+                        {% for skill in data.skills %}
+                            <h5>{{ skill.type }}</h5>
+                        {% endfor %}
+                    </div>
+                    <div class="column">
+                        {% for skill in data.skills %}
+                            {% for item in skill['items'] %}
+                                {{ item }}{% if not loop.last %},{% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

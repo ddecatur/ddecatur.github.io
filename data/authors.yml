@@ -43,3 +43,19 @@ vova:
   first_name: Vladimir
   last_name: Kim
   website: http://www.vovakim.com/
+dongwei:
+  first_name: Dongwei
+  last_name: Lyu
+  website: https://scholar.google.com/citations?user=i10yLmIAAAAJ
+jacob:
+  first_name: Jacob
+  last_name: Serfaty
+  website: https://www.jacobserfaty.com/
+oded:
+  first_name: Oded
+  last_name: Stein
+  website: https://odedstein.com/
+amir:
+  first_name: Amir
+  last_name: Vaxman
+  website: https://avaxman.github.io/

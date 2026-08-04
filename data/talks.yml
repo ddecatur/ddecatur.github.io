@@ -1,16 +1,41 @@
-- id: sgi-2024
+- id: sgp
+  event: Symposium on Geometry Processing (SGP)
+  title: "Geometry Processing from 2D Image Priors"
+  venue: Bern, Switzerland
+  month: June
+  years:
+    - 2026
+  slides: https://tmp.cgg.unibe.ch/SGP26/SGP26_gradschool_GP2DPrior.pdf
+  recording: https://www.youtube.com/watch?v=Aqdwa18H-Rg&list=PLA29N7301yZQ
+
+- id: sgi
+  event: MIT Summer Geometry Initiative (SGI)
   title: Mesh Parameterization and Texture Optimization
-  venue: MIT Summer Geometry Initiative (SGI)
-  date: 2024
-  location: Remote
+  venue: Remote
+  month: June
+  years:
+    - 2024
+    - 2025
+    - 2026
+  slides: pdfs/slides/sgi-tutorial-texture-maps-2026.pdf
+  # recording:
+
 - id: cohere-2024
-  title: Text-driven localization and local editing of 3D shapes
-  venue: Cohere for AI - Community Talks
-  date: 2024
-  location: Remote
-  video: https://www.youtube.com/watch?v=OeR3h5Ad5xo&list=PLLalUvky4CLJKDaiWCumhsJpHNDhZeVll&index=2&t=195s
-- id: c3dv-2023
+  event: Cohere for AI - Community Talks
+  title: Text-driven Localization and Local Editing of 3D Shapes
+  venue: Remote
+  month: July
+  years:
+    - 2024
+  # slides:
+  recording: "https://www.youtube.com/watch?v=OeR3h5Ad5xo&list=PLLalUvky4CLJKDaiWCumhsJpHNDhZeVll&index=2&t=195s"
+
+- id: c3dv
+  event: CVPR Workshop on Compositional 3D Vision
   title: Localizing Regions on 3D Shapes via Text Descriptions
-  venue: Workshop on Compositional 3D Vision
-  date: 2023
-  location: Vancouver, BC
+  venue: Vancouver, BC
+  month: June
+  years:
+    - 2023
+  # slides:
+  # recording:

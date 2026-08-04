@@ -2,9 +2,6 @@
   type: Programming
   items:
     - Python
-    - Java
-    - C
     - PyTorch
-    - TensorFlow
     - NumPy
     - OpenCV

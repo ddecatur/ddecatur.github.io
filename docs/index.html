@@ -10,13 +10,22 @@
 </head>
 
 <body>
+    <!-- Top section navigation -->
+    <div class="top-nav">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#research">Research</a>
+        <a href="#talks">Talks</a>
+        <a href="#service">Service</a>
+    </div>
+
     <!-- Profile / bio section -->
-    <section class="section">
+    <section class="section" id="about">
         <div class="container">
             <div class="row">
                 <div class="column col-2-5">
                     <div class="portrait">
-                        <img src="/images/portrait.png" />
+                        <img src="/images/portrait.JPG" />
                     </div>
                 </div>
                 <div class="column col-3-5">
@@ -24,20 +33,19 @@
                         <b>Dale Decatur</b>
                     </h1>
                     <div class="content has-text-justified">
-                        <p>I am a PhD student at the University of Chicago's <a href="https://3dl.cs.uchicago.edu/">3DL (threedle)</a> lab studying computer graphics, 3D computer vision, and deep learning. I am advised by <a href="https://people.cs.uchicago.edu/~ranahanocka/">Rana Hanocka</a>. Previously, I interned at <a href="https://research.adobe.com/">Adobe Research</a>.</p>
-<p>In my spare time, I love to play ultimate frisbee.</p>
+                        <p>I am a PhD student at the University of Chicago's <a href="https://3dl.cs.uchicago.edu/" rel="noopener noreferrer" target="_blank">3DL (threedle)</a> lab studying computer graphics, 3D computer vision, and deep learning. I am advised by <a href="https://people.cs.uchicago.edu/~ranahanocka/" rel="noopener noreferrer" target="_blank">Rana Hanocka</a>. Previously, I interned at <a href="https://research.adobe.com/" rel="noopener noreferrer" target="_blank">Adobe Research</a>. My research is supported by an NSF GRFP fellowship.</p>
                     </div>
                     <div class="button-row">
                         <!-- <a class="button transparent" href="cv.html">
                             <span class="icon"><i class="fas fa-file"></i></span>
                             <span>CV</span>
                         </a> -->
-                        <a class="button transparent"
+                        <a class="button transparent" target="_blank" rel="noopener noreferrer"
                             href="https://scholar.google.com/citations?user=rIZXMMAAAAAJ">
                             <span class="icon"><i class="ai ai-google-scholar"></i></span>
                             <!-- <span>Scholar</span> -->
                         </a>
-                        <a class="button transparent" href="https://github.com/ddecatur">
+                        <a class="button transparent" target="_blank" rel="noopener noreferrer" href="https://github.com/ddecatur">
                             <span class="icon"><i class="fab fa-github"></i></span>
                             <!-- <span>Github</span> -->
                         </a>
@@ -49,7 +57,7 @@
                             <span class="icon"><i class="fab fa-twitter"></i></span>
                             <span>X/Twitter</span>
                         </a> -->
-                        <a class="button transparent" href="https://bsky.app/profile/daledecatur.bsky.social">
+                        <a class="button transparent" target="_blank" rel="noopener noreferrer" href="https://bsky.app/profile/daledecatur.bsky.social">
                             <span class="icon"><i class="fa-brands fa-bluesky"></i></span>
                             <!-- <span>bluesky</span> -->
                         </a>
@@ -65,33 +73,65 @@
             <h2 class="title">News</h2>
             <hr style="border: 1px solid #000">
             <div class="row">
-                <ul>
+                <ul class="news-list">
                     
-                    <li>
-                        <b>June 2025</b>: <a href="https://ddecatur.github.io/hierarchical-diffusion/">Reusing Computation in Text-to-Image Diffusion</a>, a technique for sharing diffusion denoising steps between similar generations, has been accepted to ICCV 2025.
+                    <li class="news-item">
+                        <span class="news-date"><b>Jun 2026</b></span>
+                        <span class="news-body">Presented <em>Geometry Processing from 2D Image Priors</em> at the SGP 2026 Graduate School with Richard and Nam Anh.</span>
                     </li>
                     
-                    <li>
-                        <b>Apr 2024</b>: I received a National Science Foundation Graduate Research Fellowship (NSF GRFP).
+                    <li class="news-item">
+                        <span class="news-date"><b>Jun 2026</b></span>
+                        <span class="news-body">Started an internship at Adobe Research (London).</span>
                     </li>
                     
-                    <li>
-                        <b>Feb 2024</b>: <a href="https://threedle.github.io/3d-paintbrush/">3D Paintbrush</a> has been accepted to CVPR 2024.
+                    <li class="news-item">
+                        <span class="news-date"><b>Feb 2026</b></span>
+                        <span class="news-body"><a href="https://threedle.github.io/bsb/" rel="noopener noreferrer" target="_blank">Best Segmentation Buddies</a> has been accepted to CVPR 2026.</span>
                     </li>
                     
-                    <li>
-                        <b>Nov 2023</b>: We present <a href="https://threedle.github.io/3d-paintbrush/">3D Paintbrush</a>, which produces precise localizations and highly-detailed local textures on meshes.
+                    <li class="news-item">
+                        <span class="news-date"><b>Jun 2025</b></span>
+                        <span class="news-body"><a href="https://ddecatur.github.io/hierarchical-diffusion/" rel="noopener noreferrer" target="_blank">Reusing Computation in Text-to-Image Diffusion</a> has been accepted to ICCV 2025.</span>
                     </li>
                     
-                    <li>
-                        <b>Feb 2023</b>: <a href="https://threedle.github.io/3DHighlighter/">3D Highlighter</a> has been accepted to CVPR 2023 as a highlight paper.
+                    <li class="news-item">
+                        <span class="news-date"><b>Aug 2024</b></span>
+                        <span class="news-body"><a href="https://threedle.github.io/iSeg/" rel="noopener noreferrer" target="_blank">iSeg: Interactive 3D Segmentation via Interactive Attention</a> has been accepted to SIGGRAPH Asia 2024.</span>
                     </li>
                     
-                    <li>
-                        <b>Dec 2022</b>: We present <a href="https://threedle.github.io/3DHighlighter/">3D Highlighter</a>, which localizes regions on 3D shapes via text descriptions.
+                    <li class="news-item news-extra" hidden>
+                        <span class="news-date"><b>Apr 2024</b></span>
+                        <span class="news-body">I received a National Science Foundation Graduate Research Fellowship (NSF GRFP).</span>
+                    </li>
+                    
+                    <li class="news-item news-extra" hidden>
+                        <span class="news-date"><b>Feb 2024</b></span>
+                        <span class="news-body"><a href="https://threedle.github.io/3d-paintbrush/" rel="noopener noreferrer" target="_blank">3D Paintbrush</a> has been accepted to CVPR 2024.</span>
+                    </li>
+                    
+                    <li class="news-item news-extra" hidden>
+                        <span class="news-date"><b>Feb 2023</b></span>
+                        <span class="news-body"><a href="https://threedle.github.io/3DHighlighter/" rel="noopener noreferrer" target="_blank">3D Highlighter</a> has been accepted to CVPR 2023 as a highlight paper.</span>
                     </li>
                     
                 </ul>
+                
+                <a href="#news" id="news-toggle" class="news-toggle" onclick="toggleNews(event)">show more</a>
+                <script>
+                    function toggleNews(e) {
+                        e.preventDefault();
+                        var extras = document.querySelectorAll('.news-extra');
+                        var btn = document.getElementById('news-toggle');
+                        var hidden = extras[0].hasAttribute('hidden');
+                        for (var i = 0; i < extras.length; i++) {
+                            if (hidden) extras[i].removeAttribute('hidden');
+                            else extras[i].setAttribute('hidden', '');
+                        }
+                        btn.textContent = hidden ? 'show less' : 'show more';
+                    }
+                </script>
+                
             </div>
         </div>
     </section>
@@ -104,9 +144,85 @@
             
             <div class="publication-block columns">
                 <div class="column col-1-5">
+                    <div class="publication-image publication-mousecell">
+                        
+                            
+                            <video autoplay preload playsinline class="hover-media" height="100%" loop muted width="100%">
+                                <source src="videos/bsb_after.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            
+                        
+                        <img class="base-media" alt="Best Segmentation Buddies for Image-Shape Correspondence" src="/images/bsb_before.png"/>
+                    </div>
+                </div>
+                <div class="column col-4-5">
+                    <h3 class="publication-title"><a href="https://threedle.github.io/bsb/">Best Segmentation Buddies for Image-Shape Correspondence</a></h3>
+                    <div class="publication-authors">
+                    
+                        
+                        <span class="author-block ">
+                        <a href="https://itailang.github.io/">Itai  Lang</a>*,
+                        </span>
+                    
+                        
+                        <span class="author-block ">
+                        <a href="https://scholar.google.com/citations?user=i10yLmIAAAAJ">Dongwei  Lyu</a>*,
+                        </span>
+                    
+                        
+                        <span class="author-block author-me">
+                        Dale  Decatur,
+                        </span>
+                    
+                        
+                        <span class="author-block ">
+                        <a href="https://people.cs.uchicago.edu/~ranahanocka/">Rana  Hanocka</a>
+                        </span>
+                    
+                    </div>
+                    
+                    <div class="equal-contribution-note">(*Equal contribution)</div>
+                    
+                    <div class="publication-venue">
+                        <span>CVPR, 2026</span>
+                        
+                    </div>
+                    <p class="publication-description">Best Segmentation Buddies computes segment-to-segment correspondence across different modalities.</p>
+                    <!-- Publication Links. -->
+                    <div class="publication-links buttons field">
+                        <a class="button" target="_blank" rel="noopener noreferrer"
+                        href="https://threedle.github.io/bsb/">
+                        <span class="icon"><i class="fas fa-globe-americas"></i></span>
+                        <span>Project Page</span>
+                        </a>
+                        <a class="button" target="_blank" rel="noopener noreferrer"
+                        href="https://arxiv.org/pdf/2508.21032.pdf">
+                        <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                        <span>PDF</span>
+                        </a>
+                        <a class="button" target="_blank" rel="noopener noreferrer"
+                        href="https://arxiv.org/abs/2508.21032">
+                        <span class="icon"><i class="ai ai-arxiv"></i></span>
+                        <span>arXiv</span>
+                        </a>
+                        
+                        <a class="button" target="_blank" rel="noopener noreferrer"
+                        href="https://github.com/threedle/bsb">
+                        <span class="icon"><i class="fa fab fa-github"></i></span>
+                        <span>Code</span>
+                        </a>
+                        
+                    </div>
+                    <!--/ Publication Links. -->
+                </div>
+            </div>
+            
+            <div class="publication-block columns">
+                <div class="column col-1-5">
                     <div class="publication-image ">
                         
-                        <img alt="Reusing Computation in Text-to-Image Diffusion for Efficient Generation of Image Sets" src="/images/hierarchical_diffusion_before.png"/>
+                        <img class="base-media" alt="Reusing Computation in Text-to-Image Diffusion for Efficient Generation of Image Sets" src="/images/hierarchical_diffusion_before.png"/>
                     </div>
                 </div>
                 <div class="column col-4-5">
@@ -144,6 +260,7 @@
                         </span>
                     
                     </div>
+                    
                     <div class="publication-venue">
                         <span>ICCV, 2025</span>
                         
@@ -151,23 +268,23 @@
                     <p class="publication-description">Our hierarchical diffusion shares denoising steps across correlated prompts to enable more efficient generation of image sets with diffusion models.</p>
                     <!-- Publication Links. -->
                     <div class="publication-links buttons field">
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://ddecatur.github.io/hierarchical-diffusion/">
                         <span class="icon"><i class="fas fa-globe-americas"></i></span>
                         <span>Project Page</span>
                         </a>
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://arxiv.org/pdf/2508.21032.pdf">
                         <span class="icon"><i class="fas fa-file-pdf"></i></span>
                         <span>PDF</span>
                         </a>
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://arxiv.org/abs/2508.21032">
                         <span class="icon"><i class="ai ai-arxiv"></i></span>
                         <span>arXiv</span>
                         </a>
                         
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://github.com/ddecatur/hierarchical-diffusion">
                         <span class="icon"><i class="fa fab fa-github"></i></span>
                         <span>Code</span>
@@ -182,12 +299,14 @@
                 <div class="column col-1-5">
                     <div class="publication-image publication-mousecell">
                         
-                        <video autoplay preload playsinline class="" height="100%" loop muted width="100%">
-                            <source src="videos/iseg_after.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                            
+                            <video autoplay preload playsinline class="hover-media" height="100%" loop muted width="100%">
+                                <source src="videos/iseg_after.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            
                         
-                        <img alt="iSeg: Interactive 3D Segmentation via Interactive Attention" src="/images/iseg_before.png"/>
+                        <img class="base-media" alt="iSeg: Interactive 3D Segmentation via Interactive Attention" src="/images/iseg_before.png"/>
                     </div>
                 </div>
                 <div class="column col-4-5">
@@ -220,6 +339,7 @@
                         </span>
                     
                     </div>
+                    
                     <div class="publication-venue">
                         <span>SIGGRAPH Asia, 2024</span>
                         
@@ -227,23 +347,23 @@
                     <p class="publication-description">We propose an interactive segmentation technique for 3D shapes that produces fine-grained segmentations based on user clicks.</p>
                     <!-- Publication Links. -->
                     <div class="publication-links buttons field">
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://threedle.github.io/iSeg/">
                         <span class="icon"><i class="fas fa-globe-americas"></i></span>
                         <span>Project Page</span>
                         </a>
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://arxiv.org/pdf/2404.03219.pdf">
                         <span class="icon"><i class="fas fa-file-pdf"></i></span>
                         <span>PDF</span>
                         </a>
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://arxiv.org/abs/2404.03219">
                         <span class="icon"><i class="ai ai-arxiv"></i></span>
                         <span>arXiv</span>
                         </a>
                         
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://github.com/threedle/iSeg">
                         <span class="icon"><i class="fa fab fa-github"></i></span>
                         <span>Code</span>
@@ -258,12 +378,14 @@
                 <div class="column col-1-5">
                     <div class="publication-image publication-mousecell">
                         
-                        <video autoplay preload playsinline class="" height="100%" loop muted width="100%">
-                            <source src="videos/paintbrush_after.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                            
+                            <video autoplay preload playsinline class="hover-media" height="100%" loop muted width="100%">
+                                <source src="videos/paintbrush_after.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            
                         
-                        <img alt="3D Paintbrush: Local Stylization of 3D Shapes with Cascaded Score Distillation" src="/images/paintbrush_before.png"/>
+                        <img class="base-media" alt="3D Paintbrush: Local Stylization of 3D Shapes with Cascaded Score Distillation" src="/images/paintbrush_before.png"/>
                     </div>
                 </div>
                 <div class="column col-4-5">
@@ -291,6 +413,7 @@
                         </span>
                     
                     </div>
+                    
                     <div class="publication-venue">
                         <span>CVPR, 2024</span>
                         
@@ -298,23 +421,23 @@
                     <p class="publication-description">Our approach generates precise localizations and highly detailed local textures on meshes using text guidance.</p>
                     <!-- Publication Links. -->
                     <div class="publication-links buttons field">
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://threedle.github.io/3d-paintbrush/">
                         <span class="icon"><i class="fas fa-globe-americas"></i></span>
                         <span>Project Page</span>
                         </a>
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://arxiv.org/pdf/2311.09571.pdf">
                         <span class="icon"><i class="fas fa-file-pdf"></i></span>
                         <span>PDF</span>
                         </a>
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://arxiv.org/abs/2311.09571">
                         <span class="icon"><i class="ai ai-arxiv"></i></span>
                         <span>arXiv</span>
                         </a>
                         
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://github.com/threedle/3d-paintbrush">
                         <span class="icon"><i class="fa fab fa-github"></i></span>
                         <span>Code</span>
@@ -329,12 +452,14 @@
                 <div class="column col-1-5">
                     <div class="publication-image publication-mousecell">
                         
-                        <video autoplay preload playsinline class="" height="100%" loop muted width="100%">
-                            <source src="videos/highlighter_after.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                            
+                            <video autoplay preload playsinline class="hover-media" height="100%" loop muted width="100%">
+                                <source src="videos/highlighter_after.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            
                         
-                        <img alt="3D Highlighter: Localizing Regions on 3D Shapes via Text Descriptions" src="/images/highlighter_before.png"/>
+                        <img class="base-media" alt="3D Highlighter: Localizing Regions on 3D Shapes via Text Descriptions" src="/images/highlighter_before.png"/>
                     </div>
                 </div>
                 <div class="column col-4-5">
@@ -357,6 +482,7 @@
                         </span>
                     
                     </div>
+                    
                     <div class="publication-venue">
                         <span>CVPR, 2023</span>
                         
@@ -366,23 +492,23 @@
                     <p class="publication-description">Our technique reasons about where to place seemingly unrelated concepts in semantically meaningful locations on the 3D shape, such as a 'poncho' on a horse or 'shoes' on an alien.</p>
                     <!-- Publication Links. -->
                     <div class="publication-links buttons field">
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://threedle.github.io/3DHighlighter/">
                         <span class="icon"><i class="fas fa-globe-americas"></i></span>
                         <span>Project Page</span>
                         </a>
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://arxiv.org/pdf/2212.11263.pdf">
                         <span class="icon"><i class="fas fa-file-pdf"></i></span>
                         <span>PDF</span>
                         </a>
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://arxiv.org/abs/2212.11263">
                         <span class="icon"><i class="ai ai-arxiv"></i></span>
                         <span>arXiv</span>
                         </a>
                         
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://github.com/threedle/3DHighlighter">
                         <span class="icon"><i class="fa fab fa-github"></i></span>
                         <span>Code</span>
@@ -397,11 +523,11 @@
                 <div class="column col-1-5">
                     <div class="publication-image ">
                         
-                        <img alt="VizExtract: Automatic Relation Extraction from Data Visualizations" src="/images/vizextract.png"/>
+                        <img class="base-media" alt="VizExtract: Automatic Relation Extraction from Data Visualizations" src="/images/vizextract.png"/>
                     </div>
                 </div>
                 <div class="column col-4-5">
-                    <h3 class="publication-title"><a href="https://github.com/ddecatur/VizExtract">VizExtract: Automatic Relation Extraction from Data Visualizations</a></h3>
+                    <h3 class="publication-title"><a href="https://arxiv.org/abs/2112.03485">VizExtract: Automatic Relation Extraction from Data Visualizations</a></h3>
                     <div class="publication-authors">
                     
                         
@@ -415,6 +541,7 @@
                         </span>
                     
                     </div>
+                    
                     <div class="publication-venue">
                         <span>ArXiv, 2021</span>
                         
@@ -422,23 +549,23 @@
                     <p class="publication-description">We present a system which extracts and classifies relations between variables from images of plots.</p>
                     <!-- Publication Links. -->
                     <div class="publication-links buttons field">
-                        <a class="button"
-                        href="https://github.com/ddecatur/VizExtract">
+                        <a class="button" target="_blank" rel="noopener noreferrer"
+                        href="https://arxiv.org/abs/2112.03485">
                         <span class="icon"><i class="fas fa-globe-americas"></i></span>
                         <span>Project Page</span>
                         </a>
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://arxiv.org/pdf/2112.03485.pdf">
                         <span class="icon"><i class="fas fa-file-pdf"></i></span>
                         <span>PDF</span>
                         </a>
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://arxiv.org/abs/2112.03485">
                         <span class="icon"><i class="ai ai-arxiv"></i></span>
                         <span>arXiv</span>
                         </a>
                         
-                        <a class="button"
+                        <a class="button" target="_blank" rel="noopener noreferrer"
                         href="https://github.com/ddecatur/VizExtract">
                         <span class="icon"><i class="fa fab fa-github"></i></span>
                         <span>Code</span>
@@ -447,6 +574,71 @@
                     </div>
                     <!--/ Publication Links. -->
                 </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Talks section -->
+    <section class="section" id="talks">
+        <div class="container">
+            <h2 class="title">Talks</h2>
+            <hr style="border: 1px solid #000">
+            
+            <div class="talk-block">
+                <div class="talk-event">Symposium on Geometry Processing (SGP)</div>
+                <div class="talk-title">Geometry Processing from 2D Image Priors</div>
+                <div class="talk-venue">Bern, Switzerland &middot; June 2026</div>
+                <!-- Talk Links. -->
+                <!-- <div class="talk-links buttons field">
+                    
+                    <a class="talk-button" target="_blank" rel="noopener noreferrer" href="https://tmp.cgg.unibe.ch/SGP26/SGP26_gradschool_GP2DPrior.pdf">Slides</a>
+                    
+                    
+                    <a class="talk-button" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=Aqdwa18H-Rg&list=PLA29N7301yZQ">Recording</a>
+                    
+                </div> -->
+                <!--/ Talk Links. -->
+            </div>
+            
+            <div class="talk-block">
+                <div class="talk-event">MIT Summer Geometry Initiative (SGI)</div>
+                <div class="talk-title">Mesh Parameterization and Texture Optimization</div>
+                <div class="talk-venue">Remote &middot; 2024&ndash;2026</div>
+                <!-- Talk Links. -->
+                <!-- <div class="talk-links buttons field">
+                    
+                    <a class="talk-button" target="_blank" rel="noopener noreferrer" href="pdfs/slides/sgi-tutorial-texture-maps-2026.pdf">Slides</a>
+                    
+                    
+                </div> -->
+                <!--/ Talk Links. -->
+            </div>
+            
+            <div class="talk-block">
+                <div class="talk-event">Cohere for AI - Community Talks</div>
+                <div class="talk-title">Text-driven Localization and Local Editing of 3D Shapes</div>
+                <div class="talk-venue">Remote &middot; July 2024</div>
+                <!-- Talk Links. -->
+                <!-- <div class="talk-links buttons field">
+                    
+                    
+                    <a class="talk-button" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=OeR3h5Ad5xo&list=PLLalUvky4CLJKDaiWCumhsJpHNDhZeVll&index=2&t=195s">Recording</a>
+                    
+                </div> -->
+                <!--/ Talk Links. -->
+            </div>
+            
+            <div class="talk-block">
+                <div class="talk-event">CVPR Workshop on Compositional 3D Vision</div>
+                <div class="talk-title">Localizing Regions on 3D Shapes via Text Descriptions</div>
+                <div class="talk-venue">Vancouver, BC &middot; June 2023</div>
+                <!-- Talk Links. -->
+                <!-- <div class="talk-links buttons field">
+                    
+                    
+                </div> -->
+                <!--/ Talk Links. -->
             </div>
             
         </div>
@@ -461,59 +653,7 @@
                 <div class="column">
                     <div class="service-role">Reviewer</div>
                     <div class="service-list">
-                        
-                        
-                            <div class="service-item">CVPR: 2024, 2025</div>
-                        
-                        
-                        
-                            <div class="service-item">SIGGRAPH: 2024, 2025</div>
-                        
-                        
-                        
-                            <div class="service-item">SIGGRAPH Asia: 2023, 2024, 2025</div>
-                        
-                        
-                        
-                            <div class="service-item">NeurIPS: 2023, 2025</div>
-                        
-                        
-                        
-                            <div class="service-item">ICCV: 2025</div>
-                        
-                        
-                        
-                            <div class="service-item">ICLR: 2024, 2025, 2026</div>
-                        
-                        
-                        
-                            <div class="service-item">ECCV: 2024</div>
-                        
-                        
-                        
-                            <div class="service-item">ICML: 2025</div>
-                        
-                        
-                        
-                            <div class="service-item">AAAI: 2025</div>
-                        
-                        
-                        
-                            <div class="service-item">3DV: 2026</div>
-                        
-                        
-                        
-                            <div class="service-item">Computer Aided Design: 2023</div>
-                        
-                        
-                        
-                            <div class="service-item">Graphical Models: 2023</div>
-                        
-                        
-                        
-                            <div class="service-item">Graphics Replicability Stamp Initiative: 2023</div>
-                        
-                        
+                        <div class="service-item">CVPR, SIGGRAPH, SIGGRAPH Asia, NeurIPS, ICCV, ICLR, ECCV, ICML, AAAI, 3DV, Computer Aided Design, Graphical Models</div>
                     </div>
                 </div>
             </div>

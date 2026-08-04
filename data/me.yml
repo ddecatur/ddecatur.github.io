@@ -2,20 +2,18 @@ name: Dale Decatur
 position: PhD Student
 email: ddecatur@uchicago.edu
 bio: >-
-  I am a PhD student at the University of Chicago's [3DL (threedle)](https://3dl.cs.uchicago.edu/) lab
+  I am a PhD student at the University of Chicago's [3DL (threedle)](https://3dl.cs.uchicago.edu/){target="_blank" rel="noopener noreferrer"} lab
   studying computer graphics, 3D computer vision, and deep learning.
-  I am advised by [Rana Hanocka](https://people.cs.uchicago.edu/~ranahanocka/).
-  Previously, I interned at [Adobe Research](https://research.adobe.com/).
-
-
-  In my spare time, I love to play ultimate frisbee.
+  I am advised by [Rana Hanocka](https://people.cs.uchicago.edu/~ranahanocka/){target="_blank" rel="noopener noreferrer"}.
+  Previously, I interned at [Adobe Research](https://research.adobe.com/){target="_blank" rel="noopener noreferrer"}. My research is supported by an
+  NSF GRFP fellowship.
 
 twitter_username: DecaturDale
 bluesky_username: daledecatur
 github_username: ddecatur
 linkedin_username: dale-decatur-246a38192
 google_scholar: rIZXMMAAAAAJ
-image: /images/portrait.png
+image: /images/portrait.JPG
 
 
 # markdown: kramdown
