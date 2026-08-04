@@ -4,7 +4,7 @@
   description: "Best Segmentation Buddies computes segment-to-segment correspondence across different modalities."
   project_page: "https://threedle.github.io/bsb/"
   github: threedle/bsb
-  arxiv: 2508.21032
+  arxiv: 2605.18193
   image: bsb_before.png
   image_mouseover: bsb_after.mp4
   published: true
