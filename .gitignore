@@ -2,4 +2,5 @@ old_code/
 .DS_Store
 __pycache__/
 /templates/cv.html
+/docs/cv.html
 */css/old
